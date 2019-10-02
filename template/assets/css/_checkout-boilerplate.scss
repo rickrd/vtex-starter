@@ -1,0 +1,25 @@
+@import 'compass';
+
+/**
+ * Variables
+ */
+@import '0-<%= storeAcronym %>-web-variables';
+
+/**
+ * Vendor
+ */
+
+/**
+ * Helpers
+ */
+@import '0-<%= storeAcronym %>-web-mixins';
+
+/**
+ * Header
+ */
+@import 'checkout-header';
+
+/**
+ * Header
+ */
+@import 'checkout-footer';

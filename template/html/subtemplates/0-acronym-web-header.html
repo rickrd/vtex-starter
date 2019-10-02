@@ -1,0 +1,282 @@
+<header class="header">
+    <!-- START: Welcome -->
+    <div class="header-welcome hidden">
+        <vtex.cmc:welcomeMessage></vtex.cmc:welcomeMessage>
+    </div>
+    <!-- END: Welcome -->
+
+    <!-- START: Header Content -->
+    <div class="header__content">
+        <div class="av-container">
+            <div class="av-row">
+                <div class="av-col-xs-24">
+                    <div class="header__top--wrapper">
+                        <!-- START: Hamburger Menu -->
+                        <div class="menu-bar">
+                            <a href="#" class="menu-bar__link">
+                                <span class="menu-bar__span"></span>
+                            </a>
+                        </div>
+                        <!-- END: Hamburger Menu -->
+
+                        <!-- START: Logo -->
+                        <div class="header__logo">
+                            <a href="/" class="logo__link">
+                                <img src="/arquivos/logo-lfmaquinaseferramentas.png" alt="LF Máquinas e Ferramentas" class="logo__image" />
+                            </a>
+                        </div>
+                        <!-- END: Logo -->
+
+                        <!-- START: Search -->
+                        <div class="header__search">
+                            <form action="#" method="post" class="search__form">
+                                <input type="search" class="search__input" placeholder="Digite sua busca" />
+
+                                <button type="submit" class="search__submit">Buscar</button>
+                            </form>
+
+                            <div class="search__target"></div>
+                        </div>
+                        <!-- END: Search -->
+
+                        <div class="header-stores header-item av-hidden-sm av-hidden-xs">
+                            <a href="/institucional/nossas-lojas" class="header-stores-title header-item-link"><i class="sprite icon-header-stores header-item-icon"></i>Onde encontrar</a>
+                        </div>
+
+                        <div class="header-account header-item av-hidden-sm av-hidden-xs">
+                            <a href="/account" class="header-account-title header-item-link"><i class="sprite icon-header-account header-item-icon"></i>Minha conta</a>
+                            <ul class="header-account-drop">
+                                <li class="header-account-item"><a class="header-account-link" href="/account">Minha Conta</a></li>
+                                <li class="header-account-item"><a class="header-account-link" href="/account/#/orders">Meus Pedidos</a></li>
+                                <li class="header-account-item header-account-login hidden"><a class="header-account-link" href="/login">Entrar</a></li>
+                                <li class="header-account-item header-account-logout hidden"><a class="header-account-link" href="/no-cache/user/logout">Sair</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- START: Header Minicart -->
+                        <div class="header__minicart">
+                            <a href="#" class="header__minicart-icon">
+                                <span class="header__minicart-total">0</span>
+                            </a>
+
+                            <!-- START: Minicart -->
+                            <div class="minicart">
+                                <!-- START: Minicart Header -->
+                                <div class="minicart-header">
+                                    <h3 class="minicart-header__title">Carrinho</h3>
+
+                                    <div class="minicart-header__close">
+                                        <a href="#" class="minicart-header__close-link">
+                                            <span class="minicart-header__close-bar"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- END: Minicart Header -->
+
+                                <!-- START: Minicart Products -->
+                                <ul class="minicart-products"></ul>
+                                <!-- END: Minicart Products -->
+
+                                <!-- START: Minicart Footer -->
+                                <div class="minicart-footer">
+                                    <div class="minicart-resume">
+                                        <div class="minicart-resume__wrap">
+                                            <div class="minicart-resume__total">
+                                                <div class="minicart-resume__total-items">Itens: <span class="minicart-resume__total-counter">0</span></div>
+
+                                                <div class="minicart-resume__total-price">Total: <span class="minicart-resume__total-price-target">R$ 0,00</span></div>
+                                            </div>
+
+                                            <div class="minicart-resume__checkout">
+                                                <a href="/checkout" class="minicart-checkout button button--medium button--black">Finalizar compra</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- END: Minicart Footer -->
+                            </div>
+                            <!-- END: Minicart -->
+                        </div>
+                        <!-- END: Header Minicart -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END: Header Content -->
+
+    <!-- START: Menu -->
+    <nav class="header__menu">
+        <div class="av-container">
+            <div class="av-row">
+                <div class="av-col-xs-24 av-col-static">
+                    <!-- START: Responsive -->
+                    <div class="header__responsive">
+                        <!-- START: Responsive - Menu header -->
+                        <div class="menu__header">
+                            <h3 class="menu__header-title">Menu</h3>
+                            <div class="menu-bar">
+                                <a href="#" class="menu-bar__link">
+                                    <span class="menu-bar__span"></span>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- END: Responsive - Menu header -->
+
+                        <!-- START: Responsive - Account -->
+                        <div class="menu__account">
+                            <a href="/account" class="menu__account-link">Minha conta</a>
+                            <a href="/account/#/orders" class="menu__account-link">Meus pedidos</a>
+                        </div>
+                        <!-- END: Responsive - Account -->
+                    </div>
+                    <!-- END: Responsive -->
+
+                    <ul class="menu__list">
+                        <li class="menu__item abrasivos-e-polimentos">
+                            <i class="menu__item--icon sprite icon-menu-abrasivos-e-polimento"></i>
+                            <a href="/abrasivos-e-polimentos" class="menu__link menu__link--submenu" data-name="abrasivos-e-polimentos">Abrasivos e <span>Polimento</span></a>
+                            <!-- START: Submenu -->
+                            <div class="menu__submenu-container">
+                                <div class="menu__submenu">
+                                    <div class="header-main-menu-drop-block header-main-menu-drop-block--split">
+                                        <div class="header-main-menu-drop-list" rel="abrasivos-e-polimentos" data-name="abrasivos-e-polimentos"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- END: Submenu -->
+                        </li>
+
+                        <li class="menu__item ferramentas-manuais">
+                            <i class="menu__item--icon sprite icon-menu-ferramentas-manuais"></i>
+                            <a href="/ferramentas-manuais" class="menu__link menu__link--submenu" data-name="ferramentas-manuais">Ferramentas <span>manuais</span></a>
+                            <!-- START: Submenu -->
+                            <div class="menu__submenu-container">
+                                <div class="menu__submenu">
+                                    <div class="header-main-menu-drop-block header-main-menu-drop-block--split">
+                                        <div class="header-main-menu-drop-list" rel="ferramentas-manuais" data-name="ferramentas-manuais"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- END: Submenu -->
+                        </li>
+
+                        <li class="menu__item ferramentas-eletricas---bateria">
+                            <i class="menu__item--icon sprite icon-menu-ferramentas-eletricas-bateria"></i>
+                            <a href="/ferramentas-eletricas---bateria" class="menu__link menu__link--submenu" data-name="ferramentas-eletricas---bateria"
+                                >Ferramentas <span>elétricas - baterias</span></a
+                            >
+                            <!-- START: Submenu -->
+                            <div class="menu__submenu-container">
+                                <div class="menu__submenu">
+                                    <div class="header-main-menu-drop-block header-main-menu-drop-block--split">
+                                        <div class="header-main-menu-drop-list" rel="ferramentas-eletricas---bateria" data-name="ferramentas-eletricas---bateria"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- END: Submenu -->
+                        </li>
+
+                        <li class="menu__item soldas-e-consumiveis">
+                            <i class="menu__item--icon sprite icon-menu-soldas-e-consumiveis"></i>
+                            <a href="/soldas-e-consumiveis" class="menu__link menu__link--submenu" data-name="soldas-e-consumiveis">Soldas e <span>Consumíveis</span></a>
+                            <!-- START: Submenu -->
+                            <div class="menu__submenu-container">
+                                <div class="menu__submenu">
+                                    <div class="header-main-menu-drop-block header-main-menu-drop-block--split">
+                                        <div class="header-main-menu-drop-list" rel="soldas-e-consumiveis" data-name="soldas-e-consumiveis"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- END: Submenu -->
+                        </li>
+
+                        <li class="menu__item movimentacao-de-cargas">
+                            <i class="menu__item--icon sprite icon-menu-movimentacao-de-cargas"></i>
+                            <a href="/movimentacao-de-cargas" class="menu__link menu__link--submenu" data-name="movimentacao-de-cargas">Movimentação <span>de cargas</span></a>
+                            <!-- START: Submenu -->
+                            <div class="menu__submenu-container">
+                                <div class="menu__submenu">
+                                    <div class="header-main-menu-drop-block header-main-menu-drop-block--split">
+                                        <div class="header-main-menu-drop-list" rel="movimentacao-de-cargas" data-name="movimentacao-de-cargas"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- END: Submenu -->
+                        </li>
+
+                        <li class="menu__item corte-e-usinagem">
+                            <i class="menu__item--icon sprite icon-menu-corte-e-usinagem"></i>
+                            <a href="/corte-e-usinagem" class="menu__link menu__link--submenu" data-name="corte-e-usinagem">Corte e usinagem</a>
+                            <!-- START: Submenu -->
+                            <div class="menu__submenu-container">
+                                <div class="menu__submenu">
+                                    <div class="header-main-menu-drop-block header-main-menu-drop-block--split">
+                                        <div class="header-main-menu-drop-list" rel="corte-e-usinagem" data-name="corte-e-usinagem"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- END: Submenu -->
+                        </li>
+
+                        <li class="menu__item medicao-e-teste">
+                            <i class="menu__item--icon sprite icon-menu-medicao-e-teste"></i>
+                            <a href="/medicao-e-teste" class="menu__link menu__link--submenu" data-name="medicao-e-teste">Medição e teste</a>
+                            <!-- START: Submenu -->
+                            <div class="menu__submenu-container">
+                                <div class="menu__submenu">
+                                    <div class="header-main-menu-drop-block header-main-menu-drop-block--split">
+                                        <div class="header-main-menu-drop-list" rel="medicao-e-teste" data-name="medicao-e-teste"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- END: Submenu -->
+                        </li>
+
+                        <li class="menu__item maquinas-operatrizes">
+                            <i class="menu__item--icon sprite icon-menu-maquinas-operatrizes"></i>
+                            <a href="/maquinas-operatrizes" class="menu__link menu__link--submenu" data-name="maquinas-operatrizes">Máquinas <span>Operatrizes</span></a>
+                            <!-- START: Submenu -->
+                            <div class="menu__submenu-container menu__submenu-container--reverse">
+                                <div class="menu__submenu">
+                                    <div class="header-main-menu-drop-block header-main-menu-drop-block--split">
+                                        <div class="header-main-menu-drop-list" rel="maquinas-operatrizes" data-name="maquinas-operatrizes"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- END: Submenu -->
+                        </li>
+
+                        <li class="menu__item construcao-civil">
+                            <i class="menu__item--icon sprite icon-menu-construcao-civil"></i>
+                            <a href="/construcao-civil" class="menu__link menu__link--submenu" data-name="construcao-civil">Construção <span>civil</span></a>
+                            <!-- START: Submenu -->
+                            <div class="menu__submenu-container menu__submenu-container--reverse">
+                                <div class="menu__submenu">
+                                    <div class="header-main-menu-drop-block header-main-menu-drop-block--split">
+                                        <div class="header-main-menu-drop-list" rel="construcao-civil" data-name="construcao-civil"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- END: Submenu -->
+                        </li>
+
+                        <li class="menu__item menu__item--all">
+                            <i class="menu__item--icon sprite icon-menu-all"></i>
+                            <a href="#" class="menu__link menu__link--submenu"> VER TODAS <span>CATEGORIAS</span> </a>
+
+                            <div class="menu__submenu-container">
+                                <div class="menu__submenu">
+                                    <div class="header-main-menu-drop-block header-main-menu-drop-block--split">
+                                        <div class="header-main-menu-drop-list" rel="all" data-name="all"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- END: Menu -->
+</header>

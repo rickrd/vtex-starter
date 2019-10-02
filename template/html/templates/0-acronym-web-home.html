@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce" lang="pt-br">
+    <head>
+        <vtex:metaTags />
+        <meta name="controller" content="Home" />
+
+        <!-- START - Subtemplate Metatags -->
+        <vtex:template id="0-<%= storeAcronym %>-web-metatags" />
+        <!-- END - Subtemplate Metatags -->
+
+        <!-- START - Style e Subtemplate Styles -->
+        <vtex:template id="0-<%= storeAcronym %>-web-styles" />
+        <!-- END - Subtemplate Styles -->
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+            <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+        <!-- START - Subtemplate Header -->
+        <vtex:template id="0-<%= storeAcronym %>-web-header" />
+        <!-- END - Subtemplate Header -->
+
+        <!-- START - Miolo da página -->
+        <main class="main" id="main">
+            <div class="home-banner-full__wrap">
+                <div class="slick-default home-banner-full av-hidden-sm av-hidden-xs">
+                    <vtex:contentPlaceHolder id="Banner Principal" />
+                </div>
+            </div>
+
+            <div class="home-banner-full-mobile__wrap">
+                <div class="slick-default home-banner-full-mobile av-hidden-md av-hidden-lg">
+                    <vtex:contentPlaceHolder id="Banner Principal Mobile" />
+                </div>
+            </div>
+
+            <!-- START: Rates And Benefits -->
+            <div class="rates-and-benefits">
+                <div class="av-container">
+                    <div class="av-row">
+                        <div class="av-col-xs-24">
+                            <vtex.cmc:BenefitsBar></vtex.cmc:BenefitsBar>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END: Rates And Benefits -->
+
+            <div class="home-minibanners home-minibanners-top">
+                <div class="av-container">
+                    <div class="av-row">
+                        <h1 class="minibanners-title">APROVEITE ESTAS PROMOÇÕES</h1>
+                    </div>
+                    <div class="av-row row-banners">
+                        <vtex:contentPlaceHolder id="Minibanners Topo" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="home-products home-products-1">
+                <div class="av-container">
+                    <div class="av-row">
+                        <div class="av-col-xs-24">
+                            <vtex:contentPlaceHolder id="Produtos Vitrine 1" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="home-minibanners home-minibanners-middle">
+                <div class="av-container">
+                    <div class="av-row">
+                        <vtex:contentPlaceHolder id="Minibanners Meio" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="home-products home-products-2">
+                <div class="av-container">
+                    <div class="av-row">
+                        <div class="av-col-xs-24">
+                            <vtex:contentPlaceHolder id="Produtos Vitrine 2" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="seo-contents">
+                <div class="av-container">
+                    <div class="av-row">
+                        <div class="av-col-xs-24">
+                            <vtex:contentPlaceHolder id="Texto SEO" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- END - Miolo da página -->
+
+        <!-- START - Subtemplate Generico -->
+        <vtex:template id="0-<%= storeAcronym %>-web-generico" />
+        <!-- END - Subtemplate Generico -->
+
+        <!-- START - Subtemplate Footer -->
+        <vtex:template id="0-<%= storeAcronym %>-web-footer" />
+        <!-- END - Subtemplate Footer -->
+
+        <!-- START - Scripts e Subtemplate Scripts -->
+        <vtex:template id="0-<%= storeAcronym %>-web-scripts" />
+        <!-- END - Subtemplate Scripts -->
+    </body>
+</html>

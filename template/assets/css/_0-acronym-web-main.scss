@@ -1,0 +1,7 @@
+<% if (newStore) { %>body {
+  color: $bodyColor;
+  font-family: $primaryFont;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}<% } %>
