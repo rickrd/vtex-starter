@@ -1,88 +1,129 @@
-<% if (newStore) { %>APP.controller.Account = ClassAvanti.extend({
-  init () {
+APP.controller.Account = ClassAvanti.extend({
+  init: function() {
     this.setup()
     this.start()
     this.bind()
   },
 
-  setup () {
-    this.options = {
-      $profileModal: $('.av-modal--profile .av-modal__content'),
-      $profileContent: $('#editar-perfil-conteudo, #editar-perfil #response-message'),
+  setup: function() {
+    this.modalProfile = $('.av-modal--profile')
+    this.vtexModalProfile = $('#editar-perfil-conteudo, #editar-perfil #response-message')
+    this.modalAddress = $('.av-modal--address')
+    this.vtexModalAddress = $('#address-edit #accountAjaxBusy, #address-edit #form-address')
+    this.modalAddressEdit = $('.av-modal--edit-address')
+    this.vtexModalAddressEdit = $('#form-address')
+    this.modalAddressRemove = $('.av-modal--remove-address')
+    this.vtexModalAddressRemove = $('#address-remove #exclude')
 
-      $addressEditModal: $('.av-modal--edit-address .av-modal__content'),
-      $addressEditContent: $('#form-address'),
-
-      $addressRemoveModal: $('.av-modal--remove-address .av-modal__content'),
-      $addressRemoveContent: $('#address-remove #exclude'),
-
-      $addressEditAttributes: $('.edit-address-link .address-update, .account-address .account-btn'),
-      $addressRemoveAttributes: $('.account__content .delete')
-    }
+    this.btnProfileSubmit = $('#profile-submit')
+    this.btnAdressSubmit = $('#form-submit')
   },
 
-  start () {
-    this.cloneForms()
-    this.changeAttributes()
+  start: function() {
+    this.appendProfileContent()
+    this.appendAddressContent()
+    this.appendAddressEditContent()
+    this.appendAddressRemoveContent()
+    this.setAddressEditBtns()
+    this.setAddressRemoveBtns()
   },
 
-  cloneForms () {
-    this._cloneForm('$profileModal', '$profileContent')
-    this._cloneForm('$addressEditModal', '$addressEditContent')
-    this._cloneForm('$addressRemoveModal', '$addressRemoveContent')
+  setAddressEditBtns: function() {
+    $('.edit-address-link .address-update, .account-address .account-btn').each(function() {
+      $(this).addClass('av-modal-open')
+      $(this).attr('data-target', 'av-modal--edit-address')
+    })
   },
 
-  _cloneForm (modal, content) {
-    const {
-      [modal]: $modal,
-      [content]: $content
-    } = this.options
-
-    $modal.html($content)
+  setAddressRemoveBtns: function() {
+    $('.account-address .delete').each(function() {
+      $(this).addClass('av-modal-open')
+      $(this).attr('data-target', 'av-modal--remove-address')
+    })
   },
 
-  changeAttributes () {
-    this.setEditAttributes()
-    this.setRemoveAttributes()
+  appendProfileContent: function() {
+    var _this = this
+
+    _this.modalProfile.find('.av-modal__content').append(_this.vtexModalProfile)
   },
 
-  setEditAttributes () {
-    const { $addressEditAttributes } = this.options
+  appendAddressContent: function() {
+    var _this = this
 
-    $addressEditAttributes.each((index, element) =>
-      this._attributeFn(element, 'av-modal--edit-address'))
+    _this.modalAddress.find('.av-modal__content').append(_this.vtexModalAddress)
   },
 
-  setRemoveAttributes () {
-    const { $addressRemoveAttributes } = this.options
+  appendAddressEditContent: function() {
+    var _this = this
 
-    $addressRemoveAttributes.each((index, element) =>
-      this._attributeFn(element, 'av-modal--remove-address'))
+    _this.modalAddressEdit.find('.av-modal__content').append(_this.vtexModalAddressEdit)
   },
 
-  _attributeFn (element, target) {
-    const _this = $(element)
+  appendAddressRemoveContent: function() {
+    var _this = this
 
-    _this
-      .addClass('av-modal-open')
-      .attr('data-target', target)
+    _this.modalAddressRemove.find('.av-modal__content').append(_this.vtexModalAddressRemove)
   },
 
-  bind () {
-    this.bindClose()
-  },
+  bind: function() {
+    var _this = this
 
-  bindClose () {
-    $('.av-modal .modal-footer button').on('click', event => {
-      event.preventDefault()
+    _this.btnProfileSubmit.on({
+      click: function() {
+        if ($('#firstName').val().length == 0) {
+          $('#firstName').addClass('error-input__account')
+        }
+        if ($('#lastName').val().length == 0) {
+          $('#lastName').addClass('error-input__account')
+        }
+        if ($('#document').val().length == 0) {
+          $('#document').addClass('error-input__account')
+        }
+        if ($('input[name="gender"]:checked').length == 0) {
+          $('.form-personal-data-gender').addClass('error-input__account')
+        }
+        if ($('#email').val().length == 0) {
+          $('#email').addClass('error-input__account')
+        }
+        if ($('#homePhone').val().length == 0) {
+          $('#homePhone').addClass('error-input__account')
+        }
+      }
+    })
 
-      const _this = $(event.currentTarget)
-      const $close = _this.parents('.av-modal').find('.av-modal-close')
+    _this.btnAdressSubmit.on({
+      click: function() {
+        if ($('#addressName').val().length == 0) {
+          $('#addressName').addClass('error-input__account')
+        }
+        if ($('#receiverName').val().length == 0) {
+          $('#receiverName').addClass('error-input__account')
+        }
+        if ($('#postalCode').val().length == 0) {
+          $('#postalCode').addClass('error-input__account')
+        }
+        if ($('#street').val().length == 0) {
+          $('#street').addClass('error-input__account')
+        }
+        if ($('#number').val().length == 0) {
+          $('#number').addClass('error-input__account')
+        }
+        if ($('#number').val().length == 0) {
+          $('#number').addClass('error-input__account')
+        }
+        if ($('#city').val().length == 0) {
+          $('#city').addClass('error-input__account')
+        }
+      }
+    })
 
-      $close.trigger('click')
+    $('.modal-footer button').click(function() {
+      $(this)
+        .parents('.av-modal__modal')
+        .find('.av-modal-close')
+        .trigger('click')
+      console.log('d')
     })
   }
-})<% } else { %>APP.controller.Account = ClassAvanti.extend({
-  init () {
-  }
-})<% } %>
+})

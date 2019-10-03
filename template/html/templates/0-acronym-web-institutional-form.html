@@ -1,143 +1,143 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce" lang="pt-br">
-    <head>
-        <vtex:metaTags />
-        <meta name="controller" content="Institucional" />
+  <head>
+    <vtex:metaTags />
+    <meta name="controller" content="Institucional" />
 
-        <!-- START - Subtemplate Metatags -->
-        <vtex:template id="0-<%= storeAcronym %>-web-metatags" />
-        <!-- END - Subtemplate Metatags -->
-        <title></title>
+    <!-- START - Subtemplate Metatags -->
+    <vtex:template id="0-<%= storeAcronym %>-web-metatags" />
+    <!-- END - Subtemplate Metatags -->
+    <title></title>
 
-        <!-- START - Style e Subtemplate Styles -->
-        <vtex:template id="0-<%= storeAcronym %>-web-styles" />
-        <!-- END - Subtemplate Styles -->
+    <!-- START - Style e Subtemplate Styles -->
+    <vtex:template id="0-<%= storeAcronym %>-web-styles" />
+    <!-- END - Subtemplate Styles -->
 
-        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-            <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-        <![endif]-->
-    </head>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
 
-    <body>
-        <!-- START - Subtemplate Header -->
-        <vtex:template id="0-<%= storeAcronym %>-web-header" />
-        <!-- END - Subtemplate Header -->
+  <body>
+    <!-- START - Subtemplate Header -->
+    <vtex:template id="0-<%= storeAcronym %>-web-header" />
+    <!-- END - Subtemplate Header -->
 
-        <!-- START - Miolo da página -->
-        <main class="main" id="main">
-            <!-- START: Top Banner Institucional -->
-            <section class="top-banner__institucional">
-                <div class="top-banner__institucional--desktop">
-                    <vtex:contentPlaceHolder id="Banner Principal - Desktop" />
+    <!-- START - Miolo da página -->
+    <main class="main" id="main">
+      <!-- START: Top Banner Institucional -->
+      <section class="top-banner__institucional">
+        <div class="top-banner__institucional--desktop">
+          <vtex:contentPlaceHolder id="Banner Principal - Desktop" />
+        </div>
+      </section>
+      <!-- END: Top Banner Institucional -->
+
+      <!-- START: Container Institucional -->
+      <section class="container-institucional">
+        <div class="av-container">
+          <div class="av-row">
+            <!-- START: Sidebar Institucional -->
+            <div class="av-col-xs-24 av-col-md-6">
+              <div class="sidebar">
+                <div class="sidebar__title">
+                  <span>Escolha o Assunto</span>
                 </div>
-            </section>
-            <!-- END: Top Banner Institucional -->
 
-            <!-- START: Container Institucional -->
-            <section class="container-institucional">
-                <div class="av-container">
-                    <div class="av-row">
-                        <!-- START: Sidebar Institucional -->
-                        <div class="av-col-xs-24 av-col-md-6">
-                            <div class="sidebar">
-                                <div class="sidebar__title">
-                                    <span>Escolha o Assunto</span>
-                                </div>
+                <div class="sidebar__content">
+                  <!-- START: Sidebar - Atendimento -->
+                  <h3 class="sidebar__list--title">ATENDIMENTO</h3>
 
-                                <div class="sidebar__content">
-                                    <!-- START: Sidebar - Atendimento -->
-                                    <h3 class="sidebar__list--title">ATENDIMENTO</h3>
+                  <ul class="sidebar__list">
+                    <li><a href="/institucional/fale-conosco" title="Fale conosco">Fale conosco</a></li>
+                    <li class="hide"><a href="/institucional/formas-de-entrega" title="Formas de entrega">Formas de entrega</a></li>
+                    <li><a href="/institucional/politica-de-precos" title="Política de Preços">Política de Preços</a></li>
+                    <li class="hide"><a href="/institucional/prazos-de-envio" title="Prazos de envio">Prazos de envio</a></li>
+                    <li><a href="/institucional/trocas-e-devolucoes" title="Trocas e Devoluções">Trocas e Devoluções</a></li>
+                  </ul>
+                  <!-- END: Sidebar - Atendimento -->
 
-                                    <ul class="sidebar__list">
-                                        <li><a href="/institucional/fale-conosco" title="Fale conosco">Fale conosco</a></li>
-                                        <li class="hide"><a href="/institucional/formas-de-entrega" title="Formas de entrega">Formas de entrega</a></li>
-                                        <li><a href="/institucional/politica-de-precos" title="Política de Preços">Política de Preços</a></li>
-                                        <li class="hide"><a href="/institucional/prazos-de-envio" title="Prazos de envio">Prazos de envio</a></li>
-                                        <li><a href="/institucional/trocas-e-devolucoes" title="Trocas e Devoluções">Trocas e Devoluções</a></li>
-                                    </ul>
-                                    <!-- END: Sidebar - Atendimento -->
+                  <!-- START: Sidebar - Institucional -->
+                  <h3 class="sidebar__list--title">INSTITUCIONAL</h3>
 
-                                    <!-- START: Sidebar - Institucional -->
-                                    <h3 class="sidebar__list--title">INSTITUCIONAL</h3>
-
-                                    <ul class="sidebar__list">
-                                        <li><a href="/institucional/quem-somos" title="Quem somos">Quem somos</a></li>
-                                        <li><a href="/institucional/politica-de-seguranca" title="Política de segurança">Política de segurança</a></li>
-                                        <li><a href="/institucional/onde-encontrar" title="Onde encontrar">Onde encontrar</a></li>
-                                        <li><a href="/institucional/nossas-lojas" title="Nossas lojas">Nossas lojas</a></li>
-                                    </ul>
-                                    <!-- END: Sidebar - Institucional -->
-                                </div>
-                            </div>
-                        </div>
-                        <!-- START: Sidebar Institucional -->
-
-                        <!-- START: Content Institucional -->
-                        <div class="av-col-xs-24 av-col-md-16 av-col-md-offset-2">
-                            <div class="content-institucional">
-                                <h1>Fale Conosco</h1>
-                                <form action="/lfmaquinaseferramentas/dataentities/FC/documents" class="contact-form" method="post" novalidate="novalidate">
-                                    <div class="contact-form__success">
-                                        Contato enviado com sucesso.
-                                    </div>
-
-                                    <div class="contact-form__field">
-                                        <label class="contact-form__label" for="contact-form__input--name">Nome</label>
-
-                                        <input type="text" class="contact-form__input" id="contact-form__input--name" name="nome" placeholder="Seu nome" required="required" />
-                                    </div>
-
-                                    <div class="contact-form__field">
-                                        <label class="contact-form__label" for="contact-form__input--email">E-mail</label>
-
-                                        <input type="email" class="contact-form__input" id="contact-form__input--email" name="email" placeholder="Seu e-mail" required="required" />
-                                    </div>
-
-                                    <div class="contact-form__field">
-                                        <label class="contact-form__label" for="contact-form__input--message">Mensagem</label>
-
-                                        <textarea
-                                            class="contact-form__input contact-form__input--textarea"
-                                            id="contact-form__input--message"
-                                            name="mensagem"
-                                            placeholder="Sua mensagem"
-                                            rows="8"
-                                            required="required"
-                                        ></textarea>
-                                    </div>
-
-                                    <div class="contact-form__field">
-                                        <button class="contact-form__button" type="submit">Enviar</button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                        <!-- START: Content Institucional -->
-                    </div>
+                  <ul class="sidebar__list">
+                    <li><a href="/institucional/quem-somos" title="Quem somos">Quem somos</a></li>
+                    <li><a href="/institucional/politica-de-seguranca" title="Política de segurança">Política de segurança</a></li>
+                    <li><a href="/institucional/onde-encontrar" title="Onde encontrar">Onde encontrar</a></li>
+                    <li><a href="/institucional/nossas-lojas" title="Nossas lojas">Nossas lojas</a></li>
+                  </ul>
+                  <!-- END: Sidebar - Institucional -->
                 </div>
-            </section>
-            <!-- END: Container Institucional -->
-        </main>
-        <!-- END - Miolo da página -->
+              </div>
+            </div>
+            <!-- START: Sidebar Institucional -->
 
-        <!-- START - Subtemplate Generico -->
-        <vtex:template id="0-<%= storeAcronym %>-web-generico" />
-        <!-- END - Subtemplate Generico -->
+            <!-- START: Content Institucional -->
+            <div class="av-col-xs-24 av-col-md-16 av-col-md-offset-2">
+              <div class="content-institucional">
+                <h1>Fale Conosco</h1>
+                <form action="/<%= storeName %>/dataentities/FC/documents" class="contact-form" method="post" novalidate="novalidate">
+                  <div class="contact-form__success">
+                    Contato enviado com sucesso.
+                  </div>
 
-        <!-- START - Subtemplate Footer -->
-        <vtex:template id="0-<%= storeAcronym %>-web-footer" />
-        <!-- END - Subtemplate Footer -->
+                  <div class="contact-form__field">
+                    <label class="contact-form__label" for="contact-form__input--name">Nome</label>
 
-        <!-- START - Suport content -->
-        <div class="suport-content"></div>
-        <!-- END - Suport content -->
+                    <input type="text" class="contact-form__input" id="contact-form__input--name" name="nome" placeholder="Seu nome" required="required" />
+                  </div>
 
-        <!-- START - Scripts e Subtemplate Scripts -->
-        <script src="/arquivos/jquery.mask.js"></script>
-        <vtex:template id="0-<%= storeAcronym %>-web-scripts" />
-        <!-- END - Subtemplate Scripts -->
-    </body>
+                  <div class="contact-form__field">
+                    <label class="contact-form__label" for="contact-form__input--email">E-mail</label>
+
+                    <input type="email" class="contact-form__input" id="contact-form__input--email" name="email" placeholder="Seu e-mail" required="required" />
+                  </div>
+
+                  <div class="contact-form__field">
+                    <label class="contact-form__label" for="contact-form__input--message">Mensagem</label>
+
+                    <textarea
+                      class="contact-form__input contact-form__input--textarea"
+                      id="contact-form__input--message"
+                      name="mensagem"
+                      placeholder="Sua mensagem"
+                      rows="8"
+                      required="required"
+                    ></textarea>
+                  </div>
+
+                  <div class="contact-form__field">
+                    <button class="contact-form__button" type="submit">Enviar</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <!-- START: Content Institucional -->
+          </div>
+        </div>
+      </section>
+      <!-- END: Container Institucional -->
+    </main>
+    <!-- END - Miolo da página -->
+
+    <!-- START - Subtemplate Generico -->
+    <vtex:template id="0-<%= storeAcronym %>-web-generico" />
+    <!-- END - Subtemplate Generico -->
+
+    <!-- START - Subtemplate Footer -->
+    <vtex:template id="0-<%= storeAcronym %>-web-footer" />
+    <!-- END - Subtemplate Footer -->
+
+    <!-- START - Suport content -->
+    <div class="suport-content"></div>
+    <!-- END - Suport content -->
+
+    <!-- START - Scripts e Subtemplate Scripts -->
+    <script src="/arquivos/jquery.mask.js"></script>
+    <vtex:template id="0-<%= storeAcronym %>-web-scripts" />
+    <!-- END - Subtemplate Scripts -->
+  </body>
 </html>

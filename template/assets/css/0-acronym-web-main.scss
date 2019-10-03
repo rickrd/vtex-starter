@@ -1,0 +1,28 @@
+body {
+  color: $bodyTextColor;
+  font-family: $primaryFont;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  color: $bodyTextColor;
+
+  &:hover {
+    color: $bodyTextColor;
+    text-decoration: underline;
+  }
+}
+
+#ajaxBusy {
+  display: none !important;
+}
+
+main.main {
+  margin-top: 103px;
+
+  @media (min-width: $screen-md-min) {
+    margin-top: 155px;
+  }
+}

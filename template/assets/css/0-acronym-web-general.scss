@@ -1,0 +1,126 @@
+* {
+  font-family: $primaryFont;
+}
+
+img,
+a,
+select,
+input,
+textarea,
+button {
+  &:focus,
+  &:active {
+    outline: none;
+  }
+}
+
+.slick-default {
+  .box-banner {
+    display: none;
+    overflow: hidden;
+
+    &:first-child {
+      display: block;
+    }
+
+    a {
+      display: block;
+    }
+    img {
+      @include translateX(-50%);
+
+      position: relative;
+      left: 50%;
+    }
+  }
+
+  &.slick-initialized {
+    .box-banner {
+      display: block !important;
+    }
+  }
+}
+
+.slick-dots {
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  @media (min-width: $screen-md-min) {
+    bottom: 20px;
+  }
+  li {
+    list-style: none;
+    display: inline-block;
+    border-radius: 100%;
+    margin: 0 13px;
+    button {
+      width: 9px;
+      height: 9px;
+      padding: 5px;
+      border-radius: 100%;
+      font-size: 0;
+      background-color: $doveGray;
+      border: none;
+    }
+
+    &.slick-active {
+      button {
+        background-color: $thunder;
+        border: 2px solid $white;
+      }
+    }
+  }
+}
+
+.img-full {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+
+.section-title {
+  display: block;
+  width: 100%;
+  text-align: center;
+  h2 {
+    font-size: 16px;
+  }
+}
+
+.seo-contents {
+  text-align: center;
+  padding-bottom: 40px;
+  border-top: 1px solid $desertStorm;
+  background-color: $white;
+  padding-top: 20px;
+
+  h2 {
+    font-size: 24px;
+    font-weight: $primaryFontRegular;
+    margin-top: 0;
+    margin-bottom: 2px;
+    line-height: 25px;
+  }
+
+  h3 {
+    font-size: 14px;
+    font-weight: $primaryFontRegular;
+    margin-top: 0;
+    margin-bottom: 10px;
+    line-height: 25px;
+  }
+
+  p {
+    font-size: 15px;
+    max-width: 990px;
+    margin: 0 auto;
+    margin-top: 10px;
+    line-height: 24px;
+
+    @media (max-width: $screen-sm-max) {
+      padding: 0 20px;
+    }
+  }
+}

@@ -1,135 +1,135 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce" lang="pt-br">
-    <head>
-        <vtex:metaTags />
-        <meta name="controller" content="List" />
+  <head>
+    <vtex:metaTags />
+    <meta name="controller" content="List" />
 
-        <!-- START - Subtemplate Metatags -->
-        <vtex:template id="0-<%= storeAcronym %>-web-metatags" />
-        <!-- END - Subtemplate Metatags -->
+    <!-- START - Subtemplate Metatags -->
+    <vtex:template id="0-<%= storeAcronym %>-web-metatags" />
+    <!-- END - Subtemplate Metatags -->
 
-        <!-- START - Style e Subtemplate Styles -->
-        <vtex:template id="0-<%= storeAcronym %>-web-styles" />
-        <!-- END - Subtemplate Styles -->
+    <!-- START - Style e Subtemplate Styles -->
+    <vtex:template id="0-<%= storeAcronym %>-web-styles" />
+    <!-- END - Subtemplate Styles -->
 
-        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-            <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-        <![endif]-->
-    </head>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
 
-    <body>
-        <!-- START - Subtemplate Header -->
-        <vtex:template id="0-<%= storeAcronym %>-web-header" />
-        <!-- END - Subtemplate Header -->
+  <body>
+    <!-- START - Subtemplate Header -->
+    <vtex:template id="0-<%= storeAcronym %>-web-header" />
+    <!-- END - Subtemplate Header -->
 
-        <!-- START - Main -->
-        <main class="main" id="main">
-            <div class="av-container">
-                <div class="av-row">
-                    <div class="av-hidden-xs av-hidden-sm av-col-md-24">
-                        <div class="banner-list">
-                            <vtex:contentPlaceHolder id="Banner Categoria" />
-                        </div>
-                    </div>
-                </div>
+    <!-- START - Main -->
+    <main class="main" id="main">
+      <div class="av-container">
+        <div class="av-row">
+          <div class="av-hidden-xs av-hidden-sm av-col-md-24">
+            <div class="banner-list">
+              <vtex:contentPlaceHolder id="Banner Categoria" />
             </div>
+          </div>
+        </div>
+      </div>
 
-            <div class="search-result--wrapper">
-                <div class="av-container">
-                    <div class="av-row">
-                        <div class="av-col-xs-24">
-                            <div class="search-result">Foram encontrados <span></span> resultados para: <strong></strong></div>
-                        </div>
-                    </div>
-                </div>
+      <div class="search-result--wrapper">
+        <div class="av-container">
+          <div class="av-row">
+            <div class="av-col-xs-24">
+              <div class="search-result">Foram encontrados <span></span> resultados para: <strong></strong></div>
             </div>
+          </div>
+        </div>
+      </div>
 
-            <div class="av-container">
-                <div class="av-row">
-                    <div class="av-col-xs-24 av-col-md-6">
-                        <!-- START: Filter -->
-                        <div class="search-filter">
-                            <h1 class="titulo-sessao">
-                                <vtex.cmc:searchTitle></vtex.cmc:searchTitle>
-                            </h1>
-                            <vtex.cmc:searchNavigator></vtex.cmc:searchNavigator>
-                        </div>
-                        <!-- START: End -->
-                    </div>
-
-                    <div class="av-col-xs-24 av-col-md-18">
-                        <!-- START: Search result -->
-                        <div class="search__result">
-                            <div class="search__result-top">
-                                <!-- START: Breadcrumb -->
-                                <div class="breadcrumb">
-                                    <vtex.cmc:breadCrumb></vtex.cmc:breadCrumb>
-                                </div>
-                                <!-- END: Breadcrumb -->
-
-                                <!-- START: Filter button -->
-                                <div class="search__result-filter">
-                                    <button class="button__open-filter">Filtrar</button>
-                                </div>
-                                <!-- END: Filter button -->
-
-                                <!-- START: Order -->
-                                <div class="search__result-order">
-                                    <select class="search-order" id="search-order">
-                                        <option value="">Escolha aqui</option>
-                                        <option value="OrderByPriceASC">Menor Preço</option>
-                                        <option value="OrderByPriceDESC">Maior Preço</option>
-                                        <option value="OrderByTopSaleDESC">Mais vendidos</option>
-                                        <option value="OrderByReviewRateDESC">Melhores avaliações</option>
-                                        <option value="OrderByNameASC">A - Z</option>
-                                        <option value="OrderByNameDESC">Z - A</option>
-                                        <option value="OrderByReleaseDateDESC">Data de lançamento</option>
-                                        <option value="OrderByBestDiscountDESC">Melhor Desconto</option>
-                                    </select>
-                                </div>
-                                <!-- END: Order -->
-                            </div>
-
-                            <!-- START: Result -->
-                            <div class="search-default">
-                                <div class="search-default__loading"></div>
-
-                                <div class="search-default__no-result" style="display: none;">Nenhum produto encontrado</div>
-
-                                <vtex.cmc:searchResult layout="f22b3424-f0ac-4654-a2e0-60b42ba5e0fe" itemCount="18" columnCount="18"></vtex.cmc:searchResult>
-                            </div>
-                            <!-- END: Result -->
-                        </div>
-                        <!-- END: Search result -->
-                    </div>
-                </div>
+      <div class="av-container">
+        <div class="av-row">
+          <div class="av-col-xs-24 av-col-md-6">
+            <!-- START: Filter -->
+            <div class="search-filter">
+              <h1 class="titulo-sessao">
+                <vtex.cmc:searchTitle></vtex.cmc:searchTitle>
+              </h1>
+              <vtex.cmc:searchNavigator></vtex.cmc:searchNavigator>
             </div>
+            <!-- START: End -->
+          </div>
 
-            <div class="seo-contents">
-                <div class="av-container">
-                    <div class="av-row">
-                        <div class="col-xs-24">
-                            <vtex:contentPlaceHolder id="Texto SEO" />
-                        </div>
-                    </div>
+          <div class="av-col-xs-24 av-col-md-18">
+            <!-- START: Search result -->
+            <div class="search__result">
+              <div class="search__result-top">
+                <!-- START: Breadcrumb -->
+                <div class="breadcrumb">
+                  <vtex.cmc:breadCrumb></vtex.cmc:breadCrumb>
                 </div>
+                <!-- END: Breadcrumb -->
+
+                <!-- START: Filter button -->
+                <div class="search__result-filter">
+                  <button class="button__open-filter">Filtrar</button>
+                </div>
+                <!-- END: Filter button -->
+
+                <!-- START: Order -->
+                <div class="search__result-order">
+                  <select class="search-order" id="search-order">
+                    <option value="">Escolha aqui</option>
+                    <option value="OrderByPriceASC">Menor Preço</option>
+                    <option value="OrderByPriceDESC">Maior Preço</option>
+                    <option value="OrderByTopSaleDESC">Mais vendidos</option>
+                    <option value="OrderByReviewRateDESC">Melhores avaliações</option>
+                    <option value="OrderByNameASC">A - Z</option>
+                    <option value="OrderByNameDESC">Z - A</option>
+                    <option value="OrderByReleaseDateDESC">Data de lançamento</option>
+                    <option value="OrderByBestDiscountDESC">Melhor Desconto</option>
+                  </select>
+                </div>
+                <!-- END: Order -->
+              </div>
+
+              <!-- START: Result -->
+              <div class="search-default">
+                <div class="search-default__loading"></div>
+
+                <div class="search-default__no-result" style="display: none;">Nenhum produto encontrado</div>
+
+                <vtex.cmc:searchResult layout="f22b3424-f0ac-4654-a2e0-60b42ba5e0fe" itemCount="18" columnCount="18"></vtex.cmc:searchResult>
+              </div>
+              <!-- END: Result -->
             </div>
-        </main>
-        <!-- END - Main -->
+            <!-- END: Search result -->
+          </div>
+        </div>
+      </div>
 
-        <!-- START - Subtemplate Generico -->
-        <vtex:template id="0-<%= storeAcronym %>-web-generico" />
-        <!-- END - Subtemplate Generico -->
+      <div class="seo-contents">
+        <div class="av-container">
+          <div class="av-row">
+            <div class="col-xs-24">
+              <vtex:contentPlaceHolder id="Texto SEO" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- END - Main -->
 
-        <!-- START - Subtemplate Footer -->
-        <vtex:template id="0-<%= storeAcronym %>-web-footer" />
-        <!-- END - Subtemplate Footer -->
+    <!-- START - Subtemplate Generico -->
+    <vtex:template id="0-<%= storeAcronym %>-web-generico" />
+    <!-- END - Subtemplate Generico -->
 
-        <!-- START - Scripts e Subtemplate Scripts -->
-        <vtex:template id="0-<%= storeAcronym %>-web-scripts" />
-        <!-- END - Subtemplate Scripts -->
-    </body>
+    <!-- START - Subtemplate Footer -->
+    <vtex:template id="0-<%= storeAcronym %>-web-footer" />
+    <!-- END - Subtemplate Footer -->
+
+    <!-- START - Scripts e Subtemplate Scripts -->
+    <vtex:template id="0-<%= storeAcronym %>-web-scripts" />
+    <!-- END - Subtemplate Scripts -->
+  </body>
 </html>

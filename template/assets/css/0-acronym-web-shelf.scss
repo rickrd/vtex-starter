@@ -1,0 +1,242 @@
+.main-shelf {
+  > h2 {
+    @include letter-spacing(40);
+    font-size: 18px;
+    font-weight: $primaryFontSemiBold;
+    margin: 30px 0 10px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  > ul {
+    @extend .av-row;
+    .slick-default > div > li,
+    > li {
+      @extend .av-col-xs-12;
+      @extend .av-col-md-6;
+      @media (max-width: $screen-sm-max) {
+        max-height: 245px;
+      }
+    }
+  }
+}
+
+body.list {
+  .main-shelf {
+    > ul {
+      @media (min-width: 370px) and (max-width: $screen-sm-max) {
+        margin: 0 !important;
+        > li {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}
+
+.shelf-item {
+  margin-bottom: 20px;
+  position: relative;
+  border: 1px solid $desertStorm;
+  text-align: center;
+  padding: 17px;
+
+  &:hover {
+    .shelf-item__btn-more {
+      display: block;
+    }
+  }
+
+  @media (max-width: $screen-sm-max) {
+    padding: 0 10px;
+  }
+}
+.shelf-item__flags {
+}
+
+.flag-discount {
+  display: none;
+}
+
+.flag-promotion {
+  display: none;
+}
+
+.flag-percentage {
+  background-color: $thunder;
+  color: $gorse;
+  display: none;
+  font-size: 12px;
+  font-weight: $primaryFontRegular;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  z-index: 1;
+  width: 35px;
+  height: 35px;
+  @include border-radius(100%);
+  @media (max-width: $screen-sm-max) {
+    font-size: 8px;
+  }
+
+  &--active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.shelf-item__img {
+  position: relative;
+}
+.shelf-item__img-link {
+  display: block;
+}
+.shelf-item__image {
+  img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.shelf-item__extra {
+  @media (max-width: $screen-sm-max) {
+    display: none;
+  }
+}
+
+.shelf-item__btns {
+}
+
+.shelf-item__btn-more {
+  @include translateX(-50%);
+  bottom: 50px;
+  display: none;
+  font-weight: $primaryFontSemiBold;
+  font-size: 14px;
+  left: 50%;
+  min-width: 180px;
+  @include letter-spacing(50);
+  text-align: center;
+  position: absolute;
+  background-color: $gorse;
+  color: $thunder;
+  text-transform: uppercase;
+  padding: 10px 0;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.shelf-item__info {
+}
+.shelf-item__title {
+  margin: 0;
+}
+.shelf-item__title-link {
+  display: block;
+  font-size: 14px;
+  font-weight: $primaryFontRegular;
+  overflow: hidden;
+  text-align: center;
+  height: 40px;
+
+  @media (min-width: $screen-md-min) {
+    font-size: 14px;
+    height: 40px;
+    margin-bottom: 5px;
+  }
+}
+
+.product-item__no-stock {
+  height: 39px;
+  @media (max-width: $screen-sm-max) {
+    margin-top: 2px;
+    height: 35px;
+  }
+}
+
+.shelf-item__buy-info {
+  text-align: center;
+  .product-item__no-stock-title {
+    color: $thunder;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: $primaryFontSemiBold;
+    text-transform: uppercase;
+    @media (max-width: $screen-sm-max) {
+      font-size: 11px;
+      line-height: 15px;
+    }
+
+    @media (max-width: 330px) {
+      font-size: 9px;
+    }
+  }
+
+  .product-item__no-stock-link {
+    font-size: 12px;
+    text-transform: uppercase;
+    @media (max-width: $screen-sm-max) {
+      font-size: 10px;
+    }
+    @media (max-width: 330px) {
+      line-height: 12px;
+      font-size: 8px;
+    }
+  }
+}
+.shelf-item__price {
+}
+.shelf-item__list-price {
+  color: $doveGray;
+  display: block;
+  font-size: 11px;
+  margin-right: 4px;
+  text-decoration: line-through;
+  font-weight: $primaryFontSemiBold;
+
+  @media (min-width: $screen-sm-min) {
+    font-size: 14px;
+    display: inline-block;
+    font-weight: $primaryFontRegular;
+  }
+}
+
+.shelf-item__best-price {
+  color: $thunder;
+  display: block;
+  font-size: 13px;
+  font-weight: $primaryFontSemiBold;
+
+  @media (min-width: $screen-sm-min) {
+    font-size: 16px;
+    display: inline-block;
+  }
+
+  strong {
+    font-size: 13px;
+    font-weight: $primaryFontSemiBold;
+    text-transform: none;
+    @media (min-width: $screen-sm-min) {
+      font-size: 16px;
+    }
+  }
+}
+
+.shelf-item__product-field {
+  display: none;
+}
+
+.shelf-item__installments {
+  font-size: 11px;
+  height: 17px;
+
+  @media (min-width: $screen-md-min) {
+    font-size: 14px;
+  }
+}
+.shelf-item__installments__value {
+  font-weight: $primaryFontRegular;
+}

@@ -1,0 +1,139 @@
+body.home {
+  .home-banner-full,
+  .home-banner-full-mobile {
+    img {
+      @extend .img-full;
+    }
+  }
+
+  .seo-contents {
+    margin-top: 0;
+  }
+
+  .main-shelf {
+    .shelf-item {
+      margin-bottom: 0;
+    }
+  }
+
+  .box-banner {
+    img {
+      // @extend .img-full;
+      @media (max-width: $screen-sm-max) {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+  .home-minibanners-top {
+    .box-banner {
+      @extend .av-col-md-8;
+    }
+
+    .minibanners-title {
+      font-size: 18px;
+      font-weight: $primaryFontRegular;
+      @include letter-spacing(40);
+      text-align: center;
+      @media (min-width: $screen-md-min) {
+        font-size: 24px;
+      }
+    }
+  }
+
+  .home-minibanners-middle {
+    margin-top: 20px;
+    .box-banner {
+      &:first-child {
+        @extend .av-col-xs-24;
+        @extend .av-col-md-10;
+      }
+
+      &:nth-child(2) {
+        @extend .av-col-xs-24;
+        @extend .av-col-md-14;
+        @media (max-width: $screen-sm-max) {
+          margin-top: 15px;
+        }
+      }
+
+      &:last-child {
+        @extend .av-hidden-xs;
+        @extend .av-col-md-24;
+        margin-top: 30px;
+      }
+    }
+  }
+
+  .home-products {
+    @media (max-width: $screen-sm-max) {
+      margin-top: 20px;
+    }
+  }
+
+  .home-products-2 {
+    h2 {
+      margin-top: 20px;
+    }
+
+    @media (max-width: $screen-sm-max) {
+      margin-bottom: 30px;
+    }
+  }
+
+  .rates-and-benefits {
+    border-bottom: 1px solid $alto;
+    a {
+      text-decoration: none;
+    }
+    @media (max-width: $screen-sm-max) {
+      margin-top: 30px;
+    }
+    .benefits__bar--wrapper {
+      @media (min-width: $screen-md-min) {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+      }
+    }
+
+    .benefits__bar--item {
+      text-transform: uppercase;
+      position: relative;
+
+      .benefits__bar--icon {
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      .benefits__bar--text {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 12px;
+        padding-left: 10px;
+        b {
+          display: block;
+          width: 100%;
+          font-size: 16px;
+          line-height: 19px;
+          font-weight: $primaryFontSemiBold;
+        }
+
+        strong {
+          font-size: 16px;
+          line-height: 19px;
+          font-weight: $primaryFontSemiBold;
+        }
+      }
+      &-payment {
+        .benefits__bar--text {
+          b {
+            font-weight: $primaryFontRegular;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}

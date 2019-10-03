@@ -1,0 +1,63 @@
+/* Grid config */
+$grid-columns: 24;
+$grid-gutter-width: 20px;
+$container-large-desktop: (1180px + $grid-gutter-width);
+
+/* Colors */
+$merlin: #4d423e;
+$dustyGray: #999999;
+$roseBud: #f8b89f;
+$nobel: #b4b4b4;
+$alabaster: #fafafa;
+
+/* New Colors */
+$pottersClay: #896935;
+$silverChalice: #a0a0a0;
+$saffronMango: #fbc153;
+$casablanca: #f9a74a;
+$red: #ff0000;
+
+$downy: #56d6b0;
+$codGray: #0f0b0b;
+$osloGray: #96999c;
+$brightSun: #ffea34;
+$wildSand: #f7f7f7;
+$white: #ffffff;
+$black: #000000;
+$desertStorm: #f2f1f0;
+$alto: #d6d6d6;
+$doveGray: #6e6e6e;
+$thunder: #231e1f;
+$gorse: #ffe93e;
+$roseFog: #e6c5b8;
+$santaFe: #b37359;
+$mineShaft: #353535;
+$tundora: #4d4d4d;
+$silver: #bababa;
+$mercury: #e8e8e8;
+
+$bodyTextColor: $thunder;
+$borderColor: $merlin;
+$greyText: red;
+
+$buttonGreenColor: $downy;
+
+$responsiveMenuBackground: $desertStorm;
+
+/* Fonts */
+$primaryFont: 'Saira Semi Condensed', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$secondaryFont: 'Saira Semi Condensed', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+// Primary Font Weights
+$primaryFontRegular: 400;
+$primaryFontMedium: 500;
+$primaryFontSemiBold: 600;
+$primaryFontBold: 700;
+$primaryFontExtraBold: 800;
+
+// Secondary Font Weights
+$secondaryFontRegular: 400;
+$secondaryFontMedium: 500;
+$secondaryFontSemiBold: 600;
+$secondaryFontBold: 700;
+$secondaryFontExtraBold: 800;

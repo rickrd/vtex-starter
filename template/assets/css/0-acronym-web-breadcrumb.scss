@@ -1,0 +1,52 @@
+.breadcrumb {
+  display: none;
+  margin: 10px 0;
+
+  @media (min-width: $screen-md-min) {
+    display: block;
+  }
+}
+.bread-crumb {
+  ul {
+    @include resetList();
+    @include clearfix();
+  }
+  li {
+    float: left;
+
+    &:before {
+      color: $silverChalice;
+      content: '/';
+      display: inline-block;
+      font-size: 12px;
+      margin: 0 6px;
+    }
+
+    &:first-child {
+      &:before {
+        display: none;
+      }
+
+      a {
+        font-size: 0;
+
+        &:before {
+          content: 'Home';
+          display: inline;
+          font-size: 12px;
+        }
+      }
+    }
+
+    &.last {
+      a {
+        color: $thunder;
+        font-weight: $primaryFontRegular;
+      }
+    }
+  }
+  a {
+    color: $silverChalice;
+    font-size: 12px;
+  }
+}

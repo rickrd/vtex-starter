@@ -1,0 +1,51 @@
+.av-modal {
+  display: none;
+  position: fixed;
+  z-index: 1007;
+  overflow: auto;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 50px 20px;
+  background: rgba(#000, 0.8);
+}
+
+.av-modal__modal {
+  @include transform(translateX(-50%));
+  position: relative;
+  left: 50%;
+  //top: 50px;
+  width: 600px;
+  padding: 20px;
+  background: #fff;
+}
+
+.av-modal__header {
+}
+
+.av-modal-close {
+  display: block;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  color: #fff;
+  @include sprite($sprite-main-modal-close-x);
+}
+
+.av-modal__content {
+  overflow: auto;
+}
+
+@media (max-width: $screen-sm) {
+  .av-modal__modal {
+    width: 100%;
+  }
+}
+
+@media (max-width: $screen-xs-max) {
+  .av-modal-close {
+    right: 20px;
+    top: 20px;
+  }
+}

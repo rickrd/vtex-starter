@@ -1,0 +1,75 @@
+.button {
+  @include transition(all 200ms linear);
+
+  background-color: transparent;
+  border: none;
+  display: inline-block;
+  text-transform: uppercase;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &--medium {
+    font-size: 10px;
+    padding: 12px 18px;
+  }
+
+  &--large {
+    font-size: 10px;
+    padding: 19px 18px;
+  }
+
+  &--border-black {
+    border: 1px solid $black;
+  }
+
+  &--brown {
+    color: $white;
+    background-color: $merlin;
+
+    &:hover {
+      background-color: lighten($merlin, 3);
+      color: #fff;
+    }
+  }
+
+  &--rose {
+    color: $white;
+    background-color: $roseBud;
+
+    &:hover {
+      background-color: lighten($roseBud, 3);
+      color: #fff;
+    }
+  }
+
+  &--green {
+    background-color: $buttonGreenColor;
+    color: #fff;
+
+    &:hover {
+      background-color: lighten($buttonGreenColor, 2);
+      color: #fff;
+    }
+  }
+
+  &--white {
+    background-color: $white;
+    color: $black;
+
+    &:hover {
+      color: $black;
+    }
+  }
+
+  &--black {
+    background-color: $black;
+    color: #fff;
+
+    &:hover {
+      background-color: lighten($black, 2);
+      color: #fff;
+    }
+  }
+}

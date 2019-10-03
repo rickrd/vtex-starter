@@ -1,0 +1,331 @@
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+  .header__content {
+    background-color: $thunder;
+
+    z-index: 1;
+    @media (max-width: $screen-sm-max) {
+      height: 60px;
+    }
+  }
+
+  .header__logo {
+    .logo__link {
+      display: block;
+    }
+    @media (min-width: $screen-md-min) {
+      margin-right: 17px;
+    }
+
+    @media (max-width: $screen-sm-max) {
+      position: absolute;
+      left: 50%;
+      top: 11px;
+      @include translateX(-50%);
+      img {
+        max-width: 160px;
+        height: auto;
+      }
+    }
+  }
+
+  .header__top--wrapper {
+    @media (min-width: $screen-md-min) {
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      height: 77px;
+    }
+  }
+
+  .header__search {
+    width: 100%;
+    max-width: 100%;
+    background-color: $white;
+    position: relative;
+    @media (min-width: $screen-md-min) {
+      max-width: 550px;
+    }
+
+    @media (max-width: $screen-sm-max) {
+      position: absolute;
+      top: 60px;
+      left: 0;
+      border-bottom: 1px solid $osloGray;
+    }
+  }
+
+  .search__form {
+    position: relative;
+  }
+
+  .search__input {
+    width: 100%;
+    padding: 12px 0 11px 20px;
+    font-size: 14px;
+    border: none;
+  }
+
+  .search__submit {
+    font-size: 0;
+    @include sprite($sprite-main-icon-header-search);
+    position: absolute;
+    right: -10px;
+    top: 50%;
+    @include translateY(-50%);
+    border: none;
+    background-color: $white;
+    &:before {
+      content: '';
+      width: 1px;
+      height: 22px;
+      background-color: $thunder;
+      position: absolute;
+      left: -15px;
+      top: 50%;
+      @include translateY(-50%);
+    }
+
+    @media (max-width: $screen-sm-max) {
+      right: 15px;
+      &:before {
+        display: none;
+      }
+    }
+  }
+
+  .search__target {
+    position: absolute;
+    background-color: $wildSand;
+    top: 46px;
+    width: calc(100% + 20px);
+    z-index: 1;
+    @media (min-width: $screen-md-min) {
+      top: 42px;
+    }
+  }
+
+  .search__target__list {
+    @include resetList();
+    border-top: 1px solid $silver;
+    background-color: $wildSand;
+    padding-left: 10px;
+    padding-right: 10px;
+    overflow-y: auto;
+    max-height: 260px;
+  }
+  .search__target__item {
+    border-bottom: 1px solid $alto;
+    padding-top: 12px;
+    padding-bottom: 12px;
+
+    &:last-child {
+      border: none;
+    }
+  }
+
+  .search__target__item--category {
+    display: none;
+  }
+
+  .search__target__item--image {
+  }
+  .search__target__link {
+    display: table;
+    font-size: 13px;
+
+    img,
+    span {
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+    img {
+      margin-right: 10px;
+      display: none;
+    }
+  }
+
+  .header-item {
+    &.header-stores {
+      margin-left: 55px;
+    }
+
+    &.header-account {
+      margin-left: 34px;
+      margin-right: 36px;
+      position: relative;
+      z-index: 3;
+      > a {
+        display: flex;
+        height: 77px;
+        &:after {
+          @include arrow(bottom, 6px, $gorse);
+          display: inline-block;
+          position: inherit;
+          margin-left: 15px;
+          vertical-align: middle;
+        }
+        &:hover {
+          text-decoration: none;
+        }
+      }
+
+      .header-account-drop {
+        @include resetList();
+        display: none;
+        position: absolute;
+        bottom: -106px;
+        border: 1px solid $desertStorm;
+        background-color: $white;
+        width: 142px;
+        height: 109px;
+        padding: 15px 25px 15px 30px;
+        li {
+          a {
+            font-size: 14px;
+            color: $thunder;
+            line-height: 25px;
+          }
+          &.header-account-login,
+          &.header-account-logout {
+            a {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+      &:hover {
+        .header-account-drop {
+          display: block;
+          border-top: 3px solid $gorse;
+        }
+        a {
+          text-decoration: none;
+        }
+      }
+    }
+
+    i {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 10px;
+    }
+    .header-item-link {
+      color: $white;
+      font-size: 13px;
+      @media (min-width: $screen-md-min) {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+
+  .header__minicart {
+    @media (max-width: $screen-sm-max) {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+    }
+    .header__minicart-icon {
+      @include sprite($sprite-main-icon-header-cart);
+      display: block;
+      position: relative;
+    }
+
+    .header__minicart-total {
+      width: 22px;
+      height: 22px;
+      background-color: $gorse;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include border-radius(100%);
+      font-size: 12px;
+      color: $thunder;
+      border: 2px solid $thunder;
+      position: absolute;
+      right: -13px;
+      top: -8px;
+    }
+  }
+
+  .header__menu {
+    background-color: $white;
+    padding: 0;
+    @media (min-width: $screen-md-min) {
+      // margin-top: -83px;
+      z-index: -1;
+      @include transition(margin-top 300ms);
+      // &--visible {
+      //   margin-top: 0;
+      //   @include transition(margin-top 300ms);
+
+      // }
+    }
+  }
+
+  /**
+      * Menu bar
+      */
+
+  .header__responsive {
+    .menu-header {
+      position: relative;
+    }
+  }
+
+  .menu-bar {
+    position: absolute;
+    top: 0;
+    left: 5px;
+    z-index: 3;
+    padding: 21px 10px;
+
+    @media (min-width: $screen-md-min) {
+      display: none;
+    }
+
+    &--opened {
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      left: initial;
+      @include translateY(-50%);
+    }
+  }
+  .menu-bar__link {
+    display: block;
+  }
+  .menu-bar__span {
+    @include burger(24px, 2px, 6px, $white, 1px);
+  }
+
+  .menu-bar__link--open {
+    .menu-bar__span {
+      @include burger-to-cross;
+      background-color: $thunder;
+      &:after,
+      &:before {
+        background-color: $thunder;
+      }
+    }
+  }
+}
+
+// body.body-lock {
+//   .header__top--wrapper {
+//     > .menu-bar {
+//       display: z;
+//     }
+//   }
+// }
+
+body.televendas {
+  header {
+    top: 65px;
+  }
+}

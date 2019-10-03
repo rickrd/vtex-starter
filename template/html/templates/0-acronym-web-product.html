@@ -1,201 +1,201 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce" lang="pt-br">
-    <head>
-        <vtex:metaTags />
-        <meta name="controller" content="Product" />
+  <head>
+    <vtex:metaTags />
+    <meta name="controller" content="Product" />
 
-        <!-- START - Subtemplate Metatags -->
-        <vtex:template id="0-<%= storeAcronym %>-web-metatags" />
-        <!-- END - Subtemplate Metatags -->
+    <!-- START - Subtemplate Metatags -->
+    <vtex:template id="0-<%= storeAcronym %>-web-metatags" />
+    <!-- END - Subtemplate Metatags -->
 
-        <!-- START - Style e Subtemplate Styles -->
-        <vtex:template id="0-<%= storeAcronym %>-web-styles" />
-        <!-- END - Subtemplate Styles -->
+    <!-- START - Style e Subtemplate Styles -->
+    <vtex:template id="0-<%= storeAcronym %>-web-styles" />
+    <!-- END - Subtemplate Styles -->
 
-        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-            <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-        <![endif]-->
-    </head>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
 
-    <body>
-        <!-- START - Subtemplate Header -->
-        <vtex:template id="0-<%= storeAcronym %>-web-header" />
-        <!-- END - Subtemplate Header -->
+  <body>
+    <!-- START - Subtemplate Header -->
+    <vtex:template id="0-<%= storeAcronym %>-web-header" />
+    <!-- END - Subtemplate Header -->
 
-        <!-- START - Miolo da página -->
-        <main class="main" id="main">
-            <!-- START: Breadcrumb -->
-            <section class="breadcrumb">
-                <div class="av-container">
-                    <div class="av-row">
-                        <div class="av-col-xs-24">
-                            <vtex.cmc:breadCrumb></vtex.cmc:breadCrumb>
-                        </div>
-                    </div>
+    <!-- START - Miolo da página -->
+    <main class="main" id="main">
+      <!-- START: Breadcrumb -->
+      <section class="breadcrumb">
+        <div class="av-container">
+          <div class="av-row">
+            <div class="av-col-xs-24">
+              <vtex.cmc:breadCrumb></vtex.cmc:breadCrumb>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END: Breadcrumb -->
+
+      <!-- START: Product Info -->
+      <section class="product-info">
+        <div class="av-container">
+          <div class="av-row">
+            <!-- START: Product Images -->
+            <div class="product-images av-col-xs-24 av-col-md-10">
+              <vtex.cmc:ProductImage zoom="off"></vtex.cmc:ProductImage>
+            </div>
+            <!-- END: Product Images -->
+
+            <div class="product-infos av-col-xs-24 av-col-md-10 av-col-md-offset-2">
+              <!-- START: Product Name -->
+              <div class="product-name">
+                <h1>
+                  <vtex.cmc:productName></vtex.cmc:productName>
+                </h1>
+              </div>
+              <!-- END: Product Name -->
+
+              <!-- START: Product Reference -->
+              <div class="product-reference">Ref: <vtex.cmc:skuReference></vtex.cmc:skuReference></div>
+              <!-- END: Product Reference -->
+
+              <!-- START: Product Sku -->
+              <div class="product-sku">
+                <vtex.cmc:skuSelection></vtex.cmc:skuSelection>
+              </div>
+              <!-- END: Product Sku -->
+              <!-- START: Product Buy -->
+              <div class="product-buy-content">
+                <div class="product-price">
+                  <vtex.cmc:skuPrice></vtex.cmc:skuPrice>
                 </div>
-            </section>
-            <!-- END: Breadcrumb -->
 
-            <!-- START: Product Info -->
-            <section class="product-info">
-                <div class="av-container">
-                    <div class="av-row">
-                        <!-- START: Product Images -->
-                        <div class="product-images av-col-xs-24 av-col-md-10">
-                            <vtex.cmc:ProductImage zoom="off"></vtex.cmc:ProductImage>
-                        </div>
-                        <!-- END: Product Images -->
-
-                        <div class="product-infos av-col-xs-24 av-col-md-10 av-col-md-offset-2">
-                            <!-- START: Product Name -->
-                            <div class="product-name">
-                                <h1>
-                                    <vtex.cmc:productName></vtex.cmc:productName>
-                                </h1>
-                            </div>
-                            <!-- END: Product Name -->
-
-                            <!-- START: Product Reference -->
-                            <div class="product-reference">Ref: <vtex.cmc:skuReference></vtex.cmc:skuReference></div>
-                            <!-- END: Product Reference -->
-
-                            <!-- START: Product Sku -->
-                            <div class="product-sku">
-                                <vtex.cmc:skuSelection></vtex.cmc:skuSelection>
-                            </div>
-                            <!-- END: Product Sku -->
-                            <!-- START: Product Buy -->
-                            <div class="product-buy-content">
-                                <div class="product-price">
-                                    <vtex.cmc:skuPrice></vtex.cmc:skuPrice>
-                                </div>
-
-                                <div class="product-buy">
-                                    <vtex.cmc:BuyButton></vtex.cmc:BuyButton>
-                                </div>
-
-                                <div class="calculadora-produto">
-                                    <div class="calculadora-qtd">
-                                        <div class="calculadora-qtd--text">Quantidade:</div>
-                                        <div class="calculadora-qtd--field">
-                                            <span class="calculadora-qtd-btn calculadora-qtd--less"></span>
-                                            <input type="text" class="calculadora-qtd--input" />
-                                            <span class="calculadora-qtd-btn calculadora-qtd--more"></span>
-                                        </div>
-                                    </div>
-
-                                    <div class="calculadora-lote">
-                                        <span class="calculadora-lote-unidade"></span>
-                                        <span class="calculadora-lote-tipo"></span>
-                                    </div>
-                                    <div class="calculadora-minimo">
-                                        <i class="calculadora-minimo--icon sprite icon-calculadora"></i>
-                                        <div class="calculadora-minimo--text">
-                                            Unidade mínima
-                                            <span class="calculadora-minimo--text__value"></span>
-                                        </div>
-                                        <div class="calculadora-minimo--popup">
-                                            <i class="calculadora-minimo--popup__close"></i>
-                                            <div class="calculadora-minimo-step1">
-                                                <span class="calculadora-minimo--popup__title">CALCULADORA</span>
-                                                <div class="calculadora-minimo--popup__text">
-                                                    <span class="calculadora-minimo--text1">Digite a quantidade necessária (em <b></b>)</span>
-                                                    <span class="calculadora-minimo--text2">Unidade mínima: <b></b></span>
-                                                </div>
-
-                                                <div class="calculadora-minimo--popup__field">
-                                                    <input type="text" name="calculadora-minimo" class="calculadora-minimo--input" />
-                                                    <a href="javascript:;" class="calculadora-btn calculadora-btn-step1">CALCULAR</a>
-                                                </div>
-                                            </div>
-
-                                            <div class="calculadora-minimo-step2">
-                                                <span class="calculadora-minimo--popup__title">CALCULADORA <i class="sprite icon-calculadora-refresh"></i></span>
-                                                <div class="calculadora-minimo--popup__text">
-                                                    <span class="calculadora-minimo--text1">Para <b></b> a quantidade mínima que você deverá adicionar ao carrinho é</span>
-                                                    <span class="calculadora-minimo--text2"></span>
-                                                </div>
-
-                                                <div class="calculadora-minimo--popup__field">
-                                                    <a href="javascript:;" class="calculadora-btn calculadora-btn-step2">SELECIONAR QUANTIDADE</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- END: Product Buy -->
-
-                            <!-- START: Product Shipping -->
-                            <div class="product-shipping">
-                                <span class="product-shipping-text">Calcule o frete e o prazo:</span>
-                                <vtex.cmc:shippingValue></vtex.cmc:shippingValue>
-                            </div>
-                            <!-- END: Product Shipping -->
-                        </div>
-                    </div>
+                <div class="product-buy">
+                  <vtex.cmc:BuyButton></vtex.cmc:BuyButton>
                 </div>
-            </section>
-            <!-- END: Product Info -->
 
-            <!-- START: Product Description -->
-            <section class="product-details">
-                <div class="av-container">
-                    <div class="av-row">
-                        <div class="av-col-xs-24">
-                            <div class="product-details-tabs">
-                                <div class="product-details-tab">
-                                    <h2 class="product-details__title selected" rel="description-content">Descrição</h2>
-                                </div>
-                                <div class="product-details-tab">
-                                    <h2 class="product-details__title" rel="specification-content">Especificações</h2>
-                                </div>
-                            </div>
-
-                            <div class="product-details-contents">
-                                <div class="product-details-content description-content selected">
-                                    <vtex.cmc:ProductDescription></vtex.cmc:ProductDescription>
-                                </div>
-                                <div class="product-details-content specification-content">
-                                    <vtex.cmc:productSpecification></vtex.cmc:productSpecification>
-                                    <div style="display: none;">
-                                        <vtex.cmc:stockKeepingUnitMeasures></vtex.cmc:stockKeepingUnitMeasures>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                <div class="calculadora-produto">
+                  <div class="calculadora-qtd">
+                    <div class="calculadora-qtd--text">Quantidade:</div>
+                    <div class="calculadora-qtd--field">
+                      <span class="calculadora-qtd-btn calculadora-qtd--less"></span>
+                      <input type="text" class="calculadora-qtd--input" />
+                      <span class="calculadora-qtd-btn calculadora-qtd--more"></span>
                     </div>
-                </div>
-            </section>
-            <!-- END: Product Description -->
+                  </div>
 
-            <!-- START: Product Related -->
-            <section class="product-related">
-                <div class="av-container">
-                    <div class="av-row">
-                        <div class="av-col-xs-24">
-                            <vtex:contentPlaceHolder id="ColecaoQVVT" />
-                        </div>
+                  <div class="calculadora-lote">
+                    <span class="calculadora-lote-unidade"></span>
+                    <span class="calculadora-lote-tipo"></span>
+                  </div>
+                  <div class="calculadora-minimo">
+                    <i class="calculadora-minimo--icon sprite icon-calculadora"></i>
+                    <div class="calculadora-minimo--text">
+                      Unidade mínima
+                      <span class="calculadora-minimo--text__value"></span>
                     </div>
+                    <div class="calculadora-minimo--popup">
+                      <i class="calculadora-minimo--popup__close"></i>
+                      <div class="calculadora-minimo-step1">
+                        <span class="calculadora-minimo--popup__title">CALCULADORA</span>
+                        <div class="calculadora-minimo--popup__text">
+                          <span class="calculadora-minimo--text1">Digite a quantidade necessária (em <b></b>)</span>
+                          <span class="calculadora-minimo--text2">Unidade mínima: <b></b></span>
+                        </div>
+
+                        <div class="calculadora-minimo--popup__field">
+                          <input type="text" name="calculadora-minimo" class="calculadora-minimo--input" />
+                          <a href="javascript:;" class="calculadora-btn calculadora-btn-step1">CALCULAR</a>
+                        </div>
+                      </div>
+
+                      <div class="calculadora-minimo-step2">
+                        <span class="calculadora-minimo--popup__title">CALCULADORA <i class="sprite icon-calculadora-refresh"></i></span>
+                        <div class="calculadora-minimo--popup__text">
+                          <span class="calculadora-minimo--text1">Para <b></b> a quantidade mínima que você deverá adicionar ao carrinho é</span>
+                          <span class="calculadora-minimo--text2"></span>
+                        </div>
+
+                        <div class="calculadora-minimo--popup__field">
+                          <a href="javascript:;" class="calculadora-btn calculadora-btn-step2">SELECIONAR QUANTIDADE</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-            </section>
-            <!-- END: Product Related -->
-        </main>
-        <!-- END - Miolo da página -->
+              </div>
+              <!-- END: Product Buy -->
 
-        <!-- START - Subtemplate Generico -->
-        <vtex:template id="0-<%= storeAcronym %>-web-generico" />
-        <!-- END - Subtemplate Generico -->
+              <!-- START: Product Shipping -->
+              <div class="product-shipping">
+                <span class="product-shipping-text">Calcule o frete e o prazo:</span>
+                <vtex.cmc:shippingValue></vtex.cmc:shippingValue>
+              </div>
+              <!-- END: Product Shipping -->
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END: Product Info -->
 
-        <!-- START - Subtemplate Footer -->
-        <vtex:template id="0-<%= storeAcronym %>-web-footer" />
-        <!-- END - Subtemplate Footer -->
+      <!-- START: Product Description -->
+      <section class="product-details">
+        <div class="av-container">
+          <div class="av-row">
+            <div class="av-col-xs-24">
+              <div class="product-details-tabs">
+                <div class="product-details-tab">
+                  <h2 class="product-details__title selected" rel="description-content">Descrição</h2>
+                </div>
+                <div class="product-details-tab">
+                  <h2 class="product-details__title" rel="specification-content">Especificações</h2>
+                </div>
+              </div>
 
-        <!-- START - Scripts e Subtemplate Scripts -->
-        <vtex:template id="0-<%= storeAcronym %>-web-scripts" />
-        <!-- END - Subtemplate Scripts -->
-    </body>
+              <div class="product-details-contents">
+                <div class="product-details-content description-content selected">
+                  <vtex.cmc:ProductDescription></vtex.cmc:ProductDescription>
+                </div>
+                <div class="product-details-content specification-content">
+                  <vtex.cmc:productSpecification></vtex.cmc:productSpecification>
+                  <div style="display: none;">
+                    <vtex.cmc:stockKeepingUnitMeasures></vtex.cmc:stockKeepingUnitMeasures>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END: Product Description -->
+
+      <!-- START: Product Related -->
+      <section class="product-related">
+        <div class="av-container">
+          <div class="av-row">
+            <div class="av-col-xs-24">
+              <vtex:contentPlaceHolder id="ColecaoQVVT" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END: Product Related -->
+    </main>
+    <!-- END - Miolo da página -->
+
+    <!-- START - Subtemplate Generico -->
+    <vtex:template id="0-<%= storeAcronym %>-web-generico" />
+    <!-- END - Subtemplate Generico -->
+
+    <!-- START - Subtemplate Footer -->
+    <vtex:template id="0-<%= storeAcronym %>-web-footer" />
+    <!-- END - Subtemplate Footer -->
+
+    <!-- START - Scripts e Subtemplate Scripts -->
+    <vtex:template id="0-<%= storeAcronym %>-web-scripts" />
+    <!-- END - Subtemplate Scripts -->
+  </body>
 </html>

@@ -1,0 +1,81 @@
+.custom-select {
+  background-color: $white;
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 20px;
+  position: relative;
+  text-align: left;
+  vertical-align: middle;
+  width: 180px;
+  border: 1px solid $desertStorm;
+  padding-left: 10px;
+
+  &:after {
+    @include translateX(-50%);
+
+    content: '';
+    margin-top: -2px;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+  }
+
+  select {
+    -moz-appearance: none !important;
+    -webkit-appearance: none !important;
+    @include opacity(0);
+
+    border: none;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+  @media (min-width: $screen-md-min) {
+    &:before {
+      background-image: none !important;
+      content: 'Ordenação:';
+      font-size: 13px;
+      font-weight: $primaryFontRegular;
+      position: absolute;
+      left: -90px;
+    }
+  }
+}
+.custom-select__selected {
+  color: $silverChalice;
+  font-size: 13px;
+  font-weight: $primaryFontRegular;
+  position: relative;
+
+  @media (min-width: $screen-md-min) {
+    display: block;
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      right: -5px;
+      top: 50%;
+    }
+
+    &:before {
+      @include arrow(top, 6px, $thunder);
+      left: inherit;
+      margin-top: -3px;
+      border-width: 2px;
+    }
+
+    &:after {
+      @include arrow(bottom, 6px, $thunder);
+      left: inherit;
+      margin-top: 3px;
+      border-width: 2px;
+    }
+  }
+}
