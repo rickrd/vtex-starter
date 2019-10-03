@@ -3,17 +3,17 @@
   "version": "0.0.2",
   "description": "Slush VTEX starter",
   "main": "index.js",
-  "author": "@r1ckrd",
+  "author": "@rickrd",
   "license": "MIT",
   "keywords": [
     "slushgenerator"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/r1ckrd/slush-vtex-starter.git"
+    "url": "https://github.com/rickrd/slush-vtex-starter.git"
   },
   "bugs": {
-    "url": "https://github.com/r1ckrd/slush-vtex-starter/issues"
+    "url": "https://github.com/rickrd/slush-vtex-starter/issues"
   },
   "dependencies": {
     "gulp": "^3.9.1",

@@ -1,6 +1,6 @@
 {
   "name": "vtex-starter",
-  "author": "@r1ckrd",
+  "author": "@rickrd",
   "license": "ISC",
   "version": "0.0.2",
   "description": "VTEX Store development tools - reverse proxy, compilation, minification, optimization and more!",
@@ -40,7 +40,6 @@
     "sass"
   ],
   "devDependencies": {
-    "avanti-bootstrap": "github:avanti/avanti-bootstrap-4#v4.1.3-avanti",
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
     "compass-importer": "^0.4.1",

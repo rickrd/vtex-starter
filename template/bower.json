@@ -2,7 +2,7 @@
   "name": "vtex-speed-gulp",
   "description": "VTEX Store development tools - reverse proxy, compilation, minification, optimization and more!",
   "main": "",
-  "authors": ["@r1ckrd"],
+  "authors": ["@rickrd"],
   "license": "ISC",
   "keywords": ["vtex", "speed", "vtex", "speed", "gulp", "sass", "compass"],
   "moduleType": [],
