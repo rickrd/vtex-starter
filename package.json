@@ -1,6 +1,6 @@
 {
   "name": "slush-vtex-starter",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Slush VTEX starter",
   "main": "index.js",
   "author": "@rickrd",
